@@ -1,0 +1,49 @@
+queue1 dump after inserting 4 students (Nick, Sam, Liz, Eva):
+(((6:Eva)3:Sam)0:Nick(3:Liz))
+
+queue2 dump after inserting 2 students (John, Mia):
+((6:John)0:Mia)
+
+Contents of queue1 after merging with queue2:
+Contents of the student queue:
+[0] Student: Nick, priority: 2, year: 0, major: CS, group: Minority
+[0] Student: Mia, priority: 3, year: 0, major: CS, group: Minority
+[3] Student: Liz, priority: 5, year: 1, major: SCI, group: Minority
+[6] Student: John, priority: 6, year: 3, major: SCI, group: Majority
+[3] Student: Sam, priority: 1, year: 1, major: ENG, group: Majority
+[6] Student: Eva, priority: 4, year: 3, major: SCI, group: Majority
+
+Dump queue1 after merging with queue2:
+(((3:Liz)0:Mia(6:John))0:Nick((6:Eva)3:Sam))
+
+Contents of queue1 after changing the priority function to priorityFn2:
+Contents of the student queue:
+[1] Student: Sam, priority: 1, year: 1, major: ENG, group: Majority
+[4] Student: Eva, priority: 4, year: 3, major: SCI, group: Majority
+[5] Student: Liz, priority: 5, year: 1, major: SCI, group: Minority
+[2] Student: Nick, priority: 2, year: 0, major: CS, group: Minority
+[6] Student: John, priority: 6, year: 3, major: SCI, group: Majority
+[3] Student: Mia, priority: 3, year: 0, major: CS, group: Minority
+
+Dump queue1 after changing the priority function to priorityFn2:
+(((5:Liz)4:Eva)1:Sam((6:John)2:Nick(3:Mia)))
+
+Contents of queue1 after changing the priority function back to priorityFn1:
+Contents of the student queue:
+[0] Student: Mia, priority: 3, year: 0, major: CS, group: Minority
+[6] Student: John, priority: 6, year: 3, major: SCI, group: Majority
+[6] Student: Eva, priority: 4, year: 3, major: SCI, group: Majority
+[0] Student: Nick, priority: 2, year: 0, major: CS, group: Minority
+[3] Student: Liz, priority: 5, year: 1, major: SCI, group: Minority
+[3] Student: Sam, priority: 1, year: 1, major: ENG, group: Majority
+
+Dump queue1 after changing the priority function back to priorityFn1:
+(((6:Eva)6:John)0:Mia((3:Liz)0:Nick(3:Sam)))
+
+Final queue1 in priority order:
+[0] Student: Mia, priority: 3, year: 0, major: CS, group: Minority
+[0] Student: Nick, priority: 2, year: 0, major: CS, group: Minority
+[3] Student: Sam, priority: 1, year: 1, major: ENG, group: Majority
+[3] Student: Liz, priority: 5, year: 1, major: SCI, group: Minority
+[6] Student: John, priority: 6, year: 3, major: SCI, group: Majority
+[6] Student: Eva, priority: 4, year: 3, major: SCI, group: Majority
